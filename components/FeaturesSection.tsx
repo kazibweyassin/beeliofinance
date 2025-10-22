@@ -44,13 +44,13 @@ const FeaturesSection = () => {
 
   const getColorClasses = (color: string) => {
     const colorMap = {
-      blue: "bg-indigo-100 text-indigo-600",
-      green: "bg-indigo-100 text-indigo-600", 
-      purple: "bg-indigo-100 text-indigo-600",
-      orange: "bg-indigo-100 text-indigo-600",
-      pink: "bg-indigo-100 text-indigo-600"
+      blue: "bg-primary-100 text-primary-600",
+      green: "bg-success-100 text-success-600", 
+      purple: "bg-primary-100 text-primary-600",
+      orange: "bg-warning-100 text-warning-600",
+      pink: "bg-primary-100 text-primary-600"
     };
-    return colorMap[color as keyof typeof colorMap] || "bg-indigo-100 text-indigo-600";
+    return colorMap[color as keyof typeof colorMap] || "bg-primary-100 text-primary-600";
   };
 
   return (
@@ -108,7 +108,7 @@ const FeaturesSection = () => {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
-                <Link href={feature.link} className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium flex items-center space-x-2">
+                <Link href={feature.link} className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium flex items-center space-x-2">
                   <span>Learn More</span>
                   <Icon name="arrow" size={16} />
                 </Link>
@@ -130,7 +130,7 @@ const FeaturesSection = () => {
 
         {/* Additional Features Banner */}
         <motion.div 
-          className="mt-16 bg-indigo-600 dark:bg-indigo-700 rounded-2xl p-8 text-white"
+          className="mt-16 bg-primary-600 dark:bg-primary-700 rounded-2xl p-8 text-white"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -142,21 +142,21 @@ const FeaturesSection = () => {
               transition={{ duration: 0.2 }}
             >
               <div className="text-3xl font-bold mb-2">24/7</div>
-              <div className="text-indigo-100">Customer Support</div>
+              <div className="text-primary-100">Customer Support</div>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
               <div className="text-3xl font-bold mb-2">99.9%</div>
-              <div className="text-indigo-100">Uptime Guarantee</div>
+              <div className="text-primary-100">Uptime Guarantee</div>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
               <div className="text-3xl font-bold mb-2">3</div>
-              <div className="text-indigo-100">Countries Served</div>
+              <div className="text-primary-100">Countries Served</div>
             </motion.div>
           </div>
         </motion.div>

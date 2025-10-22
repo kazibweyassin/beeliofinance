@@ -160,27 +160,27 @@ const ProblemSolutionSection = () => {
                     <p className="text-gray-600 leading-relaxed text-lg">{item.solution}</p>
                     
                     {/* Benefit Badge */}
-                    <div className="inline-flex items-center px-4 py-2 bg-indigo-50 border border-indigo-200 rounded-full">
-                      <Icon name="TrendingUp" className="w-4 h-4 text-indigo-500 mr-2" />
-                      <span className="text-indigo-700 font-medium text-sm">Better Outcomes</span>
+                    <div className="inline-flex items-center px-4 py-2 bg-primary-50 border border-primary-200 rounded-full">
+                      <Icon name="TrendingUp" className="w-4 h-4 text-primary-500 mr-2" />
+                      <span className="text-primary-700 font-medium text-sm">Better Outcomes</span>
                     </div>
                   </div>
 
                   {/* Solution Visual */}
-                  <div className="mt-8 bg-gradient-to-r from-indigo-50 to-indigo-100 border border-indigo-200 rounded-2xl p-8 shadow-sm">
+                  <div className="mt-8 bg-gradient-to-r from-primary-50 to-primary-100 border border-primary-200 rounded-2xl p-8 shadow-sm">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center shadow-lg">
+                        <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center shadow-lg">
                           <Icon name="CheckCircle" className="w-6 h-6 text-white" />
                         </div>
                         <div>
-                          <h5 className="text-indigo-800 font-bold text-lg">Beelio Platform</h5>
-                          <p className="text-indigo-600 text-sm">Simple & Inclusive</p>
+                          <h5 className="text-primary-800 font-bold text-lg">Beelio Platform</h5>
+                          <p className="text-primary-600 text-sm">Simple & Inclusive</p>
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-indigo-600">Better Rates</div>
-                        <div className="text-indigo-500 text-sm">Our Promise</div>
+                        <div className="text-2xl font-bold text-primary-600">Better Rates</div>
+                        <div className="text-primary-500 text-sm">Our Promise</div>
                       </div>
                     </div>
                   </div>
@@ -198,9 +198,9 @@ const ProblemSolutionSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="bg-gradient-to-r from-indigo-50 to-indigo-100 rounded-3xl p-12 max-w-5xl mx-auto border border-indigo-200 shadow-xl">
+          <div className="bg-gradient-to-r from-primary-50 to-primary-100 rounded-3xl p-12 max-w-5xl mx-auto border border-primary-200 shadow-xl">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-indigo-500 rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 bg-primary-500 rounded-2xl flex items-center justify-center shadow-lg">
                 <Icon name="Zap" className="w-8 h-8 text-white" />
               </div>
             </div>

@@ -51,8 +51,8 @@ const Header = () => {
     <motion.header 
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-indigo-900/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg' 
-          : 'bg-indigo-900 dark:bg-gray-900 shadow-sm'
+          ? 'bg-primary-900/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg' 
+          : 'bg-primary-900 dark:bg-gray-900 shadow-sm'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -87,7 +87,7 @@ const Header = () => {
                 <Link href={item.href}>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-white hover:text-indigo-200 transition-colors duration-200 font-medium"
+                    className="text-white hover:text-primary-200 transition-colors duration-200 font-medium"
                   >
                     {item.label}
                   </button>
@@ -106,7 +106,7 @@ const Header = () => {
                 <Link href={item.href}>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center space-x-1 text-white hover:text-indigo-200 transition-colors duration-200 font-medium px-3 py-2 rounded-lg hover:bg-indigo-800"
+                    className="flex items-center space-x-1 text-white hover:text-primary-200 transition-colors duration-200 font-medium px-3 py-2 rounded-lg hover:bg-primary-800"
                   >
                     <Icon name={item.icon} size={16} />
                     <span>{item.label}</span>
@@ -121,7 +121,7 @@ const Header = () => {
             {/* Dark Mode Toggle */}
             <motion.button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-indigo-800 hover:bg-indigo-700 transition-colors duration-200"
+              className="p-2 rounded-lg bg-primary-800 hover:bg-primary-700 transition-colors duration-200"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Toggle dark mode"
@@ -138,19 +138,19 @@ const Header = () => {
               <div className="relative">
                 <motion.button
                   onClick={() => setShowUserMenu(!showUserMenu)}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-indigo-800 transition-colors duration-200"
+                  className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-primary-800 transition-colors duration-200"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                    <span className="text-indigo-900 text-sm font-medium">
+                    <span className="text-primary-900 text-sm font-medium">
                       {session?.user?.name?.charAt(0) || 'U'}
                     </span>
                   </div>
                   <span className="text-white text-sm font-medium">
                     {session?.user?.name || 'User'}
                   </span>
-                  <Icon name="chevronDown" size={16} className="text-indigo-200" />
+                  <Icon name="chevronDown" size={16} className="text-primary-200" />
                 </motion.button>
 
                 <AnimatePresence>
@@ -183,7 +183,7 @@ const Header = () => {
               <>
                 <Link href="/auth">
                   <motion.button 
-                    className="bg-white text-indigo-900 hover:bg-indigo-100 font-bold py-2 px-4 rounded-lg text-sm transition-all duration-300"
+                    className="bg-white text-primary-900 hover:bg-primary-100 font-bold py-2 px-4 rounded-lg text-sm transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -192,7 +192,7 @@ const Header = () => {
                 </Link>
                 <Link href="/auth">
                   <motion.button 
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg text-sm transition-all duration-300"
+                    className="bg-primary-600 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded-lg text-sm transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -205,7 +205,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <motion.button 
-            className="md:hidden p-2 rounded-lg hover:bg-indigo-800 transition-colors duration-200"
+            className="md:hidden p-2 rounded-lg hover:bg-primary-800 transition-colors duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             whileTap={{ scale: 0.9 }}
             aria-label="Toggle mobile menu"
@@ -226,7 +226,7 @@ const Header = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden border-t border-indigo-800"
+              className="md:hidden border-t border-primary-800"
             >
               <div className="py-4 space-y-4">
                 {navItems.map((item, index) => (
@@ -239,7 +239,7 @@ const Header = () => {
                     <Link href={item.href}>
                       <button
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="block w-full text-left px-4 py-2 text-white hover:text-indigo-200 hover:bg-indigo-800 rounded-lg transition-colors duration-200"
+                        className="block w-full text-left px-4 py-2 text-white hover:text-primary-200 hover:bg-primary-800 rounded-lg transition-colors duration-200"
                       >
                         {item.label}
                       </button>
@@ -248,7 +248,7 @@ const Header = () => {
                 ))}
                 
                 {/* Mobile Action Items */}
-                <div className="border-t border-indigo-800 pt-4">
+                <div className="border-t border-primary-800 pt-4">
                   <div className="grid grid-cols-2 gap-2">
                     {actionItems.map((item, index) => (
                       <motion.div
@@ -260,7 +260,7 @@ const Header = () => {
                         <Link href={item.href}>
                           <button
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="flex items-center space-x-2 w-full px-4 py-3 text-white hover:text-indigo-200 hover:bg-indigo-800 rounded-lg transition-colors duration-200 border border-indigo-700"
+                            className="flex items-center space-x-2 w-full px-4 py-3 text-white hover:text-primary-200 hover:bg-primary-800 rounded-lg transition-colors duration-200 border border-primary-700"
                           >
                             <Icon name={item.icon} size={18} />
                             <span className="font-medium">{item.label}</span>
@@ -271,11 +271,11 @@ const Header = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center justify-between px-4 pt-4 border-t border-indigo-800">
-                  <span className="text-sm text-indigo-200">Theme</span>
+                <div className="flex items-center justify-between px-4 pt-4 border-t border-primary-800">
+                  <span className="text-sm text-primary-200">Theme</span>
                   <button
                     onClick={toggleTheme}
-                    className="p-2 rounded-lg bg-indigo-800 hover:bg-indigo-700 transition-colors duration-200"
+                    className="p-2 rounded-lg bg-primary-800 hover:bg-primary-700 transition-colors duration-200"
                   >
                     <Icon 
                       name={isDark ? 'sun' : 'moon'} 

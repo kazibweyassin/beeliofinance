@@ -89,7 +89,7 @@ const CTASection = () => {
                   whileHover={{ rotate: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Icon name={benefit.icon} size={32} className="text-indigo-800" />
+                  <Icon name={benefit.icon} size={32} className="text-primary-800" />
                 </motion.div>
                 <h3 className="text-lg font-semibold">{benefit.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">{benefit.desc}</p>
@@ -123,7 +123,7 @@ const CTASection = () => {
                         {...register('email')}
                         type="email"
                         placeholder="Enter your email address"
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-200 ${
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200 ${
                           errors.email 
                             ? 'border-red-500 bg-red-50 dark:bg-red-900/20' 
                             : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700'
@@ -142,7 +142,7 @@ const CTASection = () => {
                     </div>
                     <motion.button
                       type="submit"
-                      className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-8 py-3 whitespace-nowrap rounded-lg transition-all duration-300"
+                      className="bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-3 whitespace-nowrap rounded-lg transition-all duration-300"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -186,14 +186,14 @@ const CTASection = () => {
             viewport={{ once: true }}
           >
             <motion.button 
-              className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200"
+              className="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Download App
             </motion.button>
             <motion.button 
-              className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200"
+              className="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -203,7 +203,7 @@ const CTASection = () => {
 
           {/* Urgency/Scarcity */}
           <motion.div 
-            className="mt-12 bg-yellow-400 dark:bg-yellow-500 text-indigo-800 dark:text-indigo-900 rounded-lg p-6 max-w-2xl mx-auto"
+            className="mt-12 bg-yellow-400 dark:bg-yellow-500 text-primary-800 dark:text-primary-900 rounded-lg p-6 max-w-2xl mx-auto"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 1.4 }}

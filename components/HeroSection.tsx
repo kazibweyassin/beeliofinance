@@ -24,7 +24,7 @@ const HeroSection = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                 Empowering African
                 <motion.span 
-                  className="text-indigo-600 dark:text-indigo-400 block"
+                  className="text-primary-600 dark:text-primary-400 block"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
@@ -55,7 +55,7 @@ const HeroSection = () => {
             >
               <Link href="/auth">
                 <motion.button 
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -64,7 +64,7 @@ const HeroSection = () => {
               </Link>
               <Link href="/dashboard">
                 <motion.button 
-                  className="bg-white text-indigo-600 hover:bg-indigo-50 border-2 border-indigo-600 font-bold text-lg px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="bg-white text-primary-600 hover:bg-primary-50 border-2 border-primary-600 font-bold text-lg px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -92,7 +92,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
                 >
-                         <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">{stat.value}</div>
+                         <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">{stat.value}</div>
                   <div className="text-sm text-gray-500 dark:text-gray-400">{stat.label}</div>
                 </motion.div>
               ))}
