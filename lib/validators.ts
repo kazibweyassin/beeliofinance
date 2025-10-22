@@ -7,8 +7,8 @@ export const userRegistrationSchema = z.object({
   email: z.string().email('Invalid email address'),
   password: z.string().min(8, 'Password must be at least 8 characters'),
   phone: z.string().min(10, 'Phone number must be at least 10 digits'),
-  country: z.enum(['UG', 'KE', 'NG'], 'Please select a valid country'),
-  role: z.enum(['BORROWER', 'LENDER'], 'Please select a valid role'),
+  country: z.enum(['UG', 'KE', 'NG'], { message: 'Please select a valid country' }),
+  role: z.enum(['BORROWER', 'LENDER'], { message: 'Please select a valid role' }),
   
   // Borrower-specific fields
   monthlyIncome: z.number().min(0).optional(),
@@ -98,14 +98,14 @@ export const kycDocumentSchema = z.object({
     'UTILITY_BILL',
     'BANK_STATEMENT',
     'SELFIE'
-  ], 'Invalid document type'),
+  ], { message: 'Invalid document type' }),
   fileName: z.string().min(1, 'File name is required'),
   fileUrl: z.string().url('Invalid file URL'),
 });
 
 export const kycVerificationSchema = z.object({
   documentId: z.string().min(1, 'Document ID is required'),
-  status: z.enum(['APPROVED', 'REJECTED'], 'Invalid verification status'),
+  status: z.enum(['APPROVED', 'REJECTED'], { message: 'Invalid verification status' }),
   reason: z.string().optional(),
 });
 
@@ -114,7 +114,7 @@ export const paymentInitSchema = z.object({
   amount: z.number()
     .min(100, 'Minimum payment amount is 100 UGX')
     .max(10000000, 'Maximum payment amount is 10,000,000 UGX'),
-  currency: z.enum(['UGX', 'KES', 'NGN'], 'Invalid currency'),
+  currency: z.enum(['UGX', 'KES', 'NGN'], { message: 'Invalid currency' }),
   email: z.string().email('Invalid email address'),
   phone: z.string().min(10, 'Phone number must be at least 10 digits'),
   purpose: z.string().min(1, 'Payment purpose is required'),
@@ -130,7 +130,7 @@ export const paymentVerificationSchema = z.object({
 export const repaymentSchema = z.object({
   repaymentId: z.string().min(1, 'Repayment ID is required'),
   amount: z.number().min(100, 'Minimum repayment amount is 100 UGX'),
-  paymentMethod: z.enum(['MPESA', 'AIRTEL_MONEY', 'BANK_TRANSFER'], 'Invalid payment method'),
+  paymentMethod: z.enum(['MPESA', 'AIRTEL_MONEY', 'BANK_TRANSFER'], { message: 'Invalid payment method' }),
   reference: z.string().optional(),
 });
 
@@ -146,7 +146,7 @@ export const notificationSchema = z.object({
     'KYC_APPROVED',
     'KYC_REJECTED',
     'GENERAL'
-  ], 'Invalid notification type'),
+  ], { message: 'Invalid notification type' }),
   title: z.string().min(1, 'Title is required'),
   message: z.string().min(1, 'Message is required'),
   data: z.any().optional(),
@@ -155,7 +155,7 @@ export const notificationSchema = z.object({
 // Verification validation schemas
 export const phoneVerificationSchema = z.object({
   phone: z.string().min(10, 'Phone number must be at least 10 digits'),
-  country: z.enum(['UG', 'KE', 'NG'], 'Invalid country code'),
+  country: z.enum(['UG', 'KE', 'NG'], { message: 'Invalid country code' }),
 });
 
 export const emailVerificationSchema = z.object({
@@ -200,7 +200,7 @@ export const adminLoanApprovalSchema = z.object({
 
 export const adminKYCVerificationSchema = z.object({
   documentId: z.string().min(1, 'Document ID is required'),
-  status: z.enum(['APPROVED', 'REJECTED'], 'Invalid verification status'),
+  status: z.enum(['APPROVED', 'REJECTED'], { message: 'Invalid verification status' }),
   reason: z.string().optional(),
   verifiedBy: z.string().min(1, 'Verifier ID is required'),
 });
@@ -216,7 +216,7 @@ export const fileUploadSchema = z.object({
     'UTILITY_BILL',
     'BANK_STATEMENT',
     'SELFIE'
-  ], 'Invalid file type'),
+  ], { message: 'Invalid file type' }),
 }).refine((data) => {
   const file = data.file as File;
   const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf'];

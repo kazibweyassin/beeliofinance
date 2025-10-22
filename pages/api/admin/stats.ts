@@ -42,7 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       prisma.loan.count(),
       prisma.investment.count(),
       prisma.kycDocument.count({ where: { status: 'PENDING' } }),
-      prisma.loan.count({ where: { isApproved: null } }),
+      prisma.loan.count({ where: { isApproved: false } }),
       prisma.loan.aggregate({
         _sum: { amount: true },
         where: { status: { in: ['ACTIVE', 'COMPLETED'] } }

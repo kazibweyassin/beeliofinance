@@ -128,7 +128,10 @@ export async function findLoanMatches(lenderId: string, limit: number = 10): Pro
     matchScore += durationScore * 0.10;
 
     // Country preference (5% weight)
-    const countryScore = calculateCountryScore(loan.borrower.country, lender.country);
+    const countryScore = calculateCountryScore(
+      loan.borrower.country || 'UG', 
+      lender.country || 'UG'
+    );
     matchScore += countryScore * 0.05;
 
     // Funding urgency bonus (5% weight)
@@ -283,12 +286,12 @@ export async function getDiversificationRecommendations(lenderId: string): Promi
   const countryDistribution: { [key: string]: number } = {};
 
   for (const investment of investments) {
-    const riskLevel = investment.loan.borrower.creditScore >= 700 ? 'LOW' : 
-                     investment.loan.borrower.creditScore >= 600 ? 'MEDIUM' : 'HIGH';
+    const riskLevel = (investment.loan.borrower.creditScore || 0) >= 700 ? 'LOW' : 
+                     (investment.loan.borrower.creditScore || 0) >= 600 ? 'MEDIUM' : 'HIGH';
     
     riskDistribution[riskLevel] = (riskDistribution[riskLevel] || 0) + investment.amount;
-    countryDistribution[investment.loan.borrower.country] = 
-      (countryDistribution[investment.loan.borrower.country] || 0) + investment.amount;
+    countryDistribution[investment.loan.borrower.country || 'UG'] = 
+      (countryDistribution[investment.loan.borrower.country || 'UG'] || 0) + investment.amount;
   }
 
   // Generate recommendations
@@ -315,9 +318,9 @@ export async function getDiversificationRecommendations(lenderId: string): Promi
     currentPortfolio: investments.map(inv => ({
       loanId: inv.loanId,
       amount: inv.amount,
-      riskLevel: inv.loan.borrower.creditScore >= 700 ? 'LOW' : 
-                inv.loan.borrower.creditScore >= 600 ? 'MEDIUM' : 'HIGH',
-      country: inv.loan.borrower.country,
+      riskLevel: (inv.loan.borrower.creditScore || 0) >= 700 ? 'LOW' : 
+                (inv.loan.borrower.creditScore || 0) >= 600 ? 'MEDIUM' : 'HIGH',
+      country: inv.loan.borrower.country || 'UG',
     })),
     recommendations,
     riskDistribution,

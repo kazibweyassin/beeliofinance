@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Get pending loans
     const loans = await prisma.loan.findMany({
-      where: { isApproved: null },
+      where: { isApproved: false },
       include: {
         borrower: {
           select: {

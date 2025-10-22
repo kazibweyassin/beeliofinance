@@ -46,7 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     
     if (process.env.NODE_ENV === 'production' && process.env.BLOB_READ_WRITE_TOKEN) {
       // Production: Upload to Vercel Blob
-      const blob = await put(fileName, fileBuffer, {
+      const blob = await put(fileName, fileBuffer.buffer, {
         access: 'public',
         contentType: getContentType(fileExtension),
       });

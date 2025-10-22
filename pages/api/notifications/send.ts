@@ -99,11 +99,7 @@ async function handleSendNotification(req: NextApiRequest, res: NextApiResponse,
 
   // Send SMS if requested
   if (validatedData.sendSMS) {
-    await sendSMSNotification({
-      userId: validatedData.userId,
-      message: validatedData.message,
-      type: validatedData.type,
-    });
+    await sendSMSNotification(validatedData.userId, validatedData.message);
   }
 
   res.status(200).json({
@@ -133,11 +129,7 @@ async function handleBulkNotification(req: NextApiRequest, res: NextApiResponse,
 
       // Send SMS if requested
       if (validatedData.sendSMS) {
-        await sendSMSNotification({
-          userId,
-          message: validatedData.message,
-          type: validatedData.type,
-        });
+        await sendSMSNotification(userId, validatedData.message);
       }
 
       return { userId, success: true };
@@ -212,7 +204,7 @@ async function handleRepaymentDueNotification(req: NextApiRequest, res: NextApiR
     return res.status(400).json({ message: 'User ID, amount, and due date are required' });
   }
 
-  await notifyRepaymentDue(userId, amount, dueDate);
+  await notifyRepaymentDue(userId);
   await sendRepaymentDueSMS(userId, amount, dueDate);
 
   res.status(200).json({

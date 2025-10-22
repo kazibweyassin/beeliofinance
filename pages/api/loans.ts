@@ -1,5 +1,7 @@
 // API endpoint for loan management
-export default function handler(req, res) {
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     // Return available loans
     const loans = [

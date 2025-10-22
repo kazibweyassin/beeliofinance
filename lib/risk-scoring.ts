@@ -141,7 +141,7 @@ export async function getUserRiskProfile(userId: string): Promise<RiskFactors> {
   // Calculate repayment history
   const totalRepayments = loans.reduce((sum, loan) => sum + loan.repayments.length, 0);
   const onTimeRepayments = loans.reduce((sum, loan) => 
-    sum + loan.repayments.filter(rep => rep.status === 'PAID' && rep.paidDate <= rep.dueDate).length, 0
+    sum + loan.repayments.filter(rep => rep.status === 'PAID' && rep.paidDate && rep.paidDate <= rep.dueDate).length, 0
   );
   const repaymentHistory = totalRepayments > 0 ? (onTimeRepayments / totalRepayments) * 100 : 100;
 

@@ -1,5 +1,7 @@
+import { NextApiRequest, NextApiResponse } from 'next';
+
 // API endpoint for user authentication
-export default function handler(req, res) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { email, password, action } = req.body;
     

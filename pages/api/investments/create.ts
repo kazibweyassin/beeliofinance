@@ -173,7 +173,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           borrowerId: loan.borrowerId,
           amount: monthlyPayment,
           dueDate: dueDate,
-          status: 'PENDING',
+          status: 'PENDING' as const,
         });
       }
 

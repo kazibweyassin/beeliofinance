@@ -178,11 +178,14 @@ const SocialProofSection = () => {
                       src={org.logo} 
                       alt={`${org.name} logo`}
                       className="max-h-8 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                      onError={(e) => {
-                        // Fallback to text if image fails to load
-                        e.currentTarget.style.display = 'none';
-                        e.currentTarget.nextElementSibling.style.display = 'block';
-                      }}
+                        onError={(e) => {
+                          // Fallback to text if image fails to load
+                          e.currentTarget.style.display = 'none';
+                          const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                          if (nextElement) {
+                            nextElement.style.display = 'block';
+                          }
+                        }}
                     />
                     <div className="text-gray-500 dark:text-gray-400 font-medium text-sm hidden">
                       {org.name}
