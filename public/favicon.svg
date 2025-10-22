@@ -1,0 +1,12 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with Ugandan flag colors -->
+  <circle cx="16" cy="16" r="16" fill="#4F46E5"/>
+  
+  <!-- Stylized B icon -->
+  <path d="M8 8h8c2.2 0 4 1.8 4 4s-1.8 4-4 4h-2v4h-6V8zm2 2v6h6c1.1 0 2-.9 2-2s-.9-2-2-2h-6z" fill="white"/>
+  
+  <!-- Ugandan crane bird silhouette -->
+  <path d="M22 6c-1 0-2 1-2 2v2c0 1 1 2 2 2s2-1 2-2V8c0-1-1-2-2-2z" fill="#FCD34D"/>
+  <path d="M20 10h4v2h-4z" fill="#FCD34D"/>
+  <path d="M21 12h2v4h-2z" fill="#FCD34D"/>
+</svg>
