@@ -11,6 +11,7 @@ import ProblemSolutionSection from '../components/ProblemSolutionSection';
 import FeaturesSection from '../components/FeaturesSection';
 import HowItWorksSection from '../components/HowItWorksSection';
 import SocialProofSection from '../components/SocialProofSection';
+import PlatformStats from '../components/PlatformStats';
 import CTASection from '../components/CTASection';
 
 const HomePage = () => {
@@ -77,6 +78,9 @@ const HomePage = () => {
 
           {/* How It Works Section */}
           <HowItWorksSection />
+
+          {/* Platform Stats */}
+          <PlatformStats />
 
           {/* Social Proof Section */}
           <SocialProofSection />

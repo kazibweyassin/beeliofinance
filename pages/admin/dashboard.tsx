@@ -1,7 +1,3 @@
-import dynamic from 'next/dynamic';
-
-const AdminDashboard = dynamic(() => import('../../components/admin/AdminDashboard'), {
-  ssr: false,
-});
+import AdminDashboard from '../../components/admin/AdminDashboard';
 
 export default AdminDashboard;
