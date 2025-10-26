@@ -9,6 +9,9 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
         
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="03abbb8610574c19" />
+        
         {/* SEO Meta tags */}
         <meta name="theme-color" content="#4F46E5" />
         <meta name="msapplication-TileColor" content="#4F46E5" />
