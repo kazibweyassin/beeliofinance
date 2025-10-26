@@ -153,22 +153,20 @@ export const authOptions: NextAuthOptions = {
       return session
     },
     async signIn({ user, account, profile }) {
-      // For OAuth providers, ensure user has a role
-      if (account?.provider === "google" || account?.provider === "email") {
-        const existingUser = await prisma.user.findUnique({
-          where: { email: user.email! }
-        })
-        
-        // Set default role for new OAuth users
-        if (!existingUser) {
-          await prisma.user.update({
-            where: { email: user.email! },
-            data: { role: "BORROWER" }
-          })
-        }
-      }
-      
+      // For OAuth providers, allow sign-in (role will be selected after)
       return true
+    },
+    async redirect({ url, baseUrl }) {
+      // If redirecting after sign-in
+      if (url.startsWith('/') || url.startsWith(baseUrl)) {
+        // Check if coming from OAuth callback
+        if (url.includes('/api/auth/callback')) {
+          // Will check role in middleware or dashboard
+          return `${baseUrl}/dashboard`
+        }
+        return url
+      }
+      return baseUrl
     },
   },
   pages: {
