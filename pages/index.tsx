@@ -13,43 +13,89 @@ import HowItWorksSection from '../components/HowItWorksSection';
 import SocialProofSection from '../components/SocialProofSection';
 import PlatformStats from '../components/PlatformStats';
 import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
 
 const HomePage = () => {
   return (
     <ThemeProvider>
       <AuthProvider>
         <ErrorBoundary>
+          {/* Enhanced SEO Component */}
+          <SEO
+            title="Beelio - Uganda's Leading Peer-to-Peer Lending Platform"
+            description="Connect directly with borrowers and lenders in Uganda. Build wealth, support communities, and create financial opportunities through secure peer-to-peer lending. Fast approvals, low rates, transparent process."
+            canonical="/"
+            keywords="peer-to-peer lending Uganda, P2P loans, microfinance Uganda, online lending, crowdfunding, investment opportunities, borrow money Uganda, lend money, financial inclusion"
+          />
+
           <Head>
-            <title>Beelio - Uganda's Leading Peer-to-Peer Lending Platform</title>
-            <meta 
-              name="description" 
-              content="Connect directly with borrowers and lenders in Uganda. Build wealth, support communities, and create financial opportunities through peer-to-peer lending." 
-            />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta name="keywords" content="peer-to-peer lending, African fintech, P2P loans, financial inclusion, Africa lending" />
-            <meta property="og:title" content="Beelio - Empowering African Communities Through P2P Lending" />
-            <meta property="og:description" content="Connect directly with borrowers and lenders across Africa. Build wealth, support communities, and create financial opportunities." />
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://beelio.com" />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="Beelio - Empowering African Communities Through P2P Lending" />
-            <meta name="twitter:description" content="Connect directly with borrowers and lenders across Africa. Build wealth, support communities, and create financial opportunities." />
-            <link rel="icon" href="/favicon.ico" />
-            
-            {/* Structured Data */}
+            {/* Additional Structured Data for Homepage */}
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
-                  "@type": "Organization",
-                  "name": "Beelio Technologies",
-                  "description": "African fintech startup focused on peer-to-peer lending",
-                  "url": "https://beelio.com",
-                  "logo": "https://beelio.com/logo.png",
-                  "sameAs": [
-                    "https://twitter.com/beelio",
-                    "https://linkedin.com/company/beelio"
+                  "@type": "WebSite",
+                  "name": "Beelio Finance",
+                  "url": "https://beelio.finance",
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://beelio.finance/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                  }
+                })
+              }}
+            />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "Service",
+                  "serviceType": "Peer-to-Peer Lending",
+                  "provider": {
+                    "@type": "FinancialService",
+                    "name": "Beelio Finance",
+                    "url": "https://beelio.finance"
+                  },
+                  "areaServed": {
+                    "@type": "Country",
+                    "name": "Uganda"
+                  },
+                  "description": "Secure peer-to-peer lending platform connecting borrowers and lenders in Uganda",
+                  "offers": {
+                    "@type": "Offer",
+                    "name": "Personal Loans",
+                    "description": "Fast loan approvals with competitive interest rates"
+                  }
+                })
+              }}
+            />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://beelio.finance"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "How It Works",
+                      "item": "https://beelio.finance/how-it-works"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": "Features",
+                      "item": "https://beelio.finance/features"
+                    }
                   ]
                 })
               }}

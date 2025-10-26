@@ -1,0 +1,19 @@
+# robots.txt for Beelio Finance
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+
+# Allow specific dashboard pages for SEO
+Allow: /dashboard$
+
+# Sitemap location
+Sitemap: https://beelio.finance/sitemap.xml
+
+# Crawl-delay (optional, helps prevent overloading)
+Crawl-delay: 1
