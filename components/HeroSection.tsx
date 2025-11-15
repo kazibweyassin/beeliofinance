@@ -464,9 +464,9 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Interactive Tech Visual */}
+          {/* Right Column - Interactive Tech Visual - Hidden on Mobile */}
           <motion.div 
-            className="relative h-[600px] lg:h-[700px]"
+            className="hidden lg:block relative h-[600px] lg:h-[700px]"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
