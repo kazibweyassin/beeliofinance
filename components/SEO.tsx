@@ -11,8 +11,8 @@ interface SEOProps {
 }
 
 export default function SEO({
-  title = 'Beelio - Peer-to-Peer Lending Platform in Uganda',
-  description = 'Uganda\'s leading peer-to-peer lending platform connecting borrowers and lenders with secure, fast, and transparent financial services.',
+  title = 'Beelio - AI Technology Platform for African Communities',
+  description = 'Beelio is an AI-powered, mobile-first technology platform enabling secure peer-to-peer connections with bank-grade security and cloud infrastructure across Africa.',
   canonical,
   ogImage = 'https://beelio.finance/logo.png',
   ogType = 'website',
@@ -48,6 +48,29 @@ export default function SEO({
       <meta property="twitter:title" content={fullTitle} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={ogImage} />
+
+      {/* Organization JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Beelio Technologies",
+            "url": siteUrl,
+            "logo": `${siteUrl}/logo.png`,
+            "sameAs": [
+              "https://twitter.com/",
+              "https://www.linkedin.com/company/"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "UG",
+              "addressLocality": "Kampala"
+            }
+          })
+        }}
+      />
     </Head>
   );
 }

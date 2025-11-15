@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useSession, signOut } from 'next-auth/react';
 import { useTheme } from './ThemeProvider';
 import Icon from './Icon';
+import Image from 'next/image';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,15 +24,16 @@ const Header = () => {
   }, []);
 
   const navItems = [
+    { href: '/about', label: 'About' },
+    { href: '/technology', label: 'Technology' },
+    { href: '/team', label: 'Team' },
     { href: '/features', label: 'Features' },
-    { href: '/how-it-works', label: 'How It Works' },
-    { href: '/testimonials', label: 'Testimonials' },
-    { href: '/contact', label: 'Contact' }
+    { href: '/how-it-works', label: 'How It Works' }
   ];
 
   const actionItems = [
-    { href: '/dashboard/borrower', label: 'Borrow', icon: 'dollar-sign' },
-    { href: '/dashboard/lender', label: 'Invest', icon: 'trending-up' }
+    { href: '/dashboard/borrower', label: 'For Users', icon: 'users' },
+    { href: '/contact', label: 'Contact', icon: 'mail' }
   ];
 
   const handleNavClick = (href: string) => {
@@ -67,10 +69,12 @@ const Header = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/" className="flex items-center">
-              <img 
-                src="/logo.png" 
-                alt="Beelio Logo" 
-                className="h-8 w-auto"
+              <Image
+                src="/logo.png"
+                alt="Beelio Logo"
+                width={120}
+                height={32}
+                priority
               />
             </Link>
           </motion.div>

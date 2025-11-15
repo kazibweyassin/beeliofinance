@@ -27,6 +27,11 @@ function getUrlMetadata(urlPath: string): { priority: number; changefreq: string
   if (urlPath.includes('/faq') || urlPath.includes('/how-it-works')) {
     return { priority: 0.9, changefreq: 'weekly' };
   }
+
+  // Company pages
+  if (urlPath === '/about' || urlPath === '/technology' || urlPath === '/team') {
+    return { priority: 0.9, changefreq: 'weekly' };
+  }
   
   // Features pages - medium-high priority
   if (urlPath.includes('/features')) {

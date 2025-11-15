@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Icon from './Icon';
+import Image from 'next/image';
 
 const Footer = () => {
   const socialLinks = [
@@ -26,15 +27,16 @@ const Footer = () => {
                 viewport={{ once: true }}
               >
                 <div className="mb-2">
-                  <img 
-                    src="/logo.png" 
-                    alt="Beelio Logo" 
-                    className="h-8 w-auto"
+                  <Image
+                    src="/logo.png"
+                    alt="Beelio Logo"
+                    width={120}
+                    height={32}
+                    priority
                   />
                 </div>
                 <p className="text-gray-300 dark:text-gray-400 text-sm max-w-md">
-                  Empowering African communities through accessible peer-to-peer lending. 
-                  Building financial inclusion, one connection at a time.
+                  AI-powered, mobile-first technology platform connecting African communities with bank-grade security and real-time processing.
                 </p>
               </motion.div>
               
@@ -94,20 +96,102 @@ const Footer = () => {
               </ul>
             </motion.div>
 
-            {/* Legal */}
+            {/* Company */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-lg font-semibold mb-4">Legal</h4>
+              <h4 className="text-lg font-semibold mb-4">Company</h4>
               <ul className="space-y-2">
                 {[
-                  { href: '/legal/privacy-policy', label: 'Privacy Policy' },
-                  { href: '/legal/terms-of-service', label: 'Terms of Service' },
+                  { href: '/about', label: 'About Us' },
+                  { href: '/technology', label: 'Our Technology' },
+                  { href: '/team', label: 'Team' },
+                  { href: '/press', label: 'Press' }
+                ].map((link, index) => (
+                  <motion.li 
+                    key={link.href}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Link 
+                      href={link.href} 
+                      className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.li>
+                ))}
+                {/* Company Profile PDF Download */}
+                <motion.li
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 1.0 }}
+                  viewport={{ once: true }}
+                >
+                  <a 
+                    href="/profile.pdf" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-200 flex items-center gap-2"
+                  >
+                    <Icon name="Download" size={16} />
+                    Company Profile
+                  </a>
+                </motion.li>
+              </ul>
+            </motion.div>
+
+            {/* Platform */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="text-lg font-semibold mb-4">Platform</h4>
+              <ul className="space-y-2">
+                {[
+                  { href: '/how-it-works', label: 'How It Works' },
                   { href: '/security/security', label: 'Security' },
-                  { href: '/security/compliance', label: 'Compliance' }
+                  { href: '/legal/privacy-policy', label: 'Privacy' },
+                  { href: '/legal/terms-of-service', label: 'Terms' }
+                ].map((link, index) => (
+                  <motion.li 
+                    key={link.href}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Link 
+                      href={link.href} 
+                      className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Resources */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="text-lg font-semibold mb-4">Resources</h4>
+              <ul className="space-y-2">
+                {[
+                  { href: '/blog', label: 'Blog' },
+                  { href: '/help', label: 'Help Center' },
+                  { href: '/contact', label: 'Contact' }
                 ].map((link, index) => (
                   <motion.li 
                     key={link.href}

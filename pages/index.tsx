@@ -9,11 +9,13 @@ import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import ProblemSolutionSection from '../components/ProblemSolutionSection';
 import FeaturesSection from '../components/FeaturesSection';
+import TechPlatformOverview from '../components/TechPlatformOverview';
 import HowItWorksSection from '../components/HowItWorksSection';
 import SocialProofSection from '../components/SocialProofSection';
 import PlatformStats from '../components/PlatformStats';
 import CTASection from '../components/CTASection';
 import SEO from '../components/SEO';
+import TrustSignals from '../components/TrustSignals';
 
 const HomePage = () => {
   return (
@@ -22,10 +24,10 @@ const HomePage = () => {
         <ErrorBoundary>
           {/* Enhanced SEO Component */}
           <SEO
-            title="Beelio - Uganda's Leading Peer-to-Peer Lending Platform"
-            description="Connect directly with borrowers and lenders in Uganda. Build wealth, support communities, and create financial opportunities through secure peer-to-peer lending. Fast approvals, low rates, transparent process."
+            title="Beelio - AI Technology Platform for African Communities"
+            description="Our AI-powered, mobile-first platform enables secure peer-to-peer connections for financial opportunities across Uganda, Kenya, and Nigeria. Enterprise security, cloud infrastructure, and real-time processing."
             canonical="/"
-            keywords="peer-to-peer lending Uganda, P2P loans, microfinance Uganda, online lending, crowdfunding, investment opportunities, borrow money Uganda, lend money, financial inclusion"
+            keywords="AI platform Africa, mobile-first technology, peer-to-peer platform, cloud infrastructure, fintech APIs, M-Pesa integration, Airtel Money, MTN, risk analytics, credit scoring, enterprise security"
           />
 
           <Head>
@@ -116,6 +118,9 @@ const HomePage = () => {
           {/* Hero Section */}
           <HeroSection />
 
+          {/* Our Technology Platform (new) */}
+          <TechPlatformOverview />
+
           {/* Problem → Solution Section */}
           <ProblemSolutionSection />
 
@@ -130,6 +135,9 @@ const HomePage = () => {
 
           {/* Social Proof Section */}
           <SocialProofSection />
+
+          {/* Trust Signals */}
+          <TrustSignals />
 
           {/* CTA Section */}
           <CTASection />

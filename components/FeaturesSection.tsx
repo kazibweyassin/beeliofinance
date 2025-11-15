@@ -2,40 +2,41 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Icon from './Icon';
+import Image from 'next/image';
 
 const FeaturesSection = () => {
   const features = [
     {
       title: "Smart Matching Algorithm",
-      description: "Our AI-powered system matches borrowers with lenders based on risk profiles, preferences, and financial goals for optimal outcomes.",
+      description: "Our proprietary AI engine uses machine learning to analyze 50+ data points including risk profiles, transaction history, preferences, and financial goals to match platform users effectively.",
       icon: "search",
       color: "blue",
       link: "/features/smart-matching"
     },
     {
       title: "Secure Escrow System",
-      description: "All transactions are protected through our secure escrow system, ensuring funds are safely held until loan terms are met.",
+      description: "Built on secure cloud infrastructure with bank-grade encryption (AES-256). Funds are held in escrow with tamper-resistant workflows and audit trails.",
       icon: "shield",
       color: "green",
       link: "/features/secure-escrow"
     },
     {
       title: "Real-time Risk Assessment",
-      description: "Advanced credit scoring and risk analysis provide transparent insights for both borrowers and lenders before committing.",
+      description: "Advanced credit scoring engine leveraging alternative data sources and behavioral analytics to provide real-time risk insights for community members.",
       icon: "chart",
       color: "purple",
       link: "/features/risk-assessment"
     },
     {
       title: "Mobile-First Experience",
-      description: "Access Beelio anywhere, anytime with our intuitive mobile app designed for African users and local payment methods.",
+      description: "Access Beelio anywhere with a mobile-first architecture optimized for low-bandwidth networks and local payment systems across African markets.",
       icon: "mobile",
       color: "orange",
       link: "/features/mobile-first"
     },
     {
       title: "Community Support",
-      description: "Built-in community features help users connect, share experiences, and build trust within the lending ecosystem.",
+      description: "Built-in reputation, profiles, and messaging that foster trust and transparency across the community marketplace.",
       icon: "users",
       color: "pink",
       link: "/features/community-support"
@@ -64,11 +65,10 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Powerful Features for Everyone
+            Our Technology Platform
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Built specifically for African markets with features that make peer-to-peer lending 
-            simple, secure, and profitable for all users.
+            A modern, API-driven platform with AI, mobile-first design, and cloud-native infrastructure that powers peer-to-peer connections at scale.
           </p>
         </motion.div>
 
@@ -117,10 +117,12 @@ const FeaturesSection = () => {
               {/* Background image for Community Support feature */}
               {feature.title === "Community Support" && (
                 <div className="absolute top-0 right-0 w-32 h-20 opacity-5 rounded-tr-xl overflow-hidden">
-                  <img 
-                    src="/street-6771492.jpg" 
-                    alt="Community street life"
-                    className="w-full h-full object-cover"
+                  <Image 
+                    src="/patterns/mesh-gradient.webp" 
+                    alt="Technology pattern"
+                    fill
+                    sizes="160px"
+                    className="object-cover"
                   />
                 </div>
               )}
