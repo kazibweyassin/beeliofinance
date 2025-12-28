@@ -37,7 +37,7 @@ const CTASection = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
               Ready to Transform Your
               <motion.span 
                 className="block text-yellow-300"

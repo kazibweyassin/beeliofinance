@@ -64,10 +64,10 @@ const FeaturesSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Our Technology Platform
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             A modern, API-driven platform with AI, mobile-first design, and cloud-native infrastructure that powers peer-to-peer connections at scale.
           </p>
         </motion.div>
@@ -94,10 +94,10 @@ const FeaturesSection = () => {
 
               {/* Content */}
               <div className="space-y-4">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -171,7 +171,7 @@ const FeaturesSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
             Integrated with Leading African Payment Services
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">

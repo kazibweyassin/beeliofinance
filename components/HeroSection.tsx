@@ -15,7 +15,7 @@ const BankingCarousel = () => {
       stat: "256-bit",
       statLabel: "SSL Encryption",
       bgGradient: "from-blue-600 to-blue-800",
-      image: "https://images.unsplash.com/photo-1700477800369-bc8e58928249?q=80&w=1051&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Cybersecurity/lock
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1280&auto=format&fit=crop&ixlib=rb-4.1.0" // Black professional in business setting
     },
     {
       title: "Real-Time Processing",
@@ -24,7 +24,7 @@ const BankingCarousel = () => {
       stat: "<2 sec",
       statLabel: "Avg Processing",
       bgGradient: "from-slate-600 to-slate-800",
-      image: "https://images.unsplash.com/photo-1633119747461-79f45df1913c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Analytics/charts
+      image: "https://images.unsplash.com/photo-1556155092-8707de31f9c4?q=80&w=1280&auto=format&fit=crop&ixlib=rb-4.1.0" // Black professional working with technology
     },
     {
       title: "24/7 Monitoring",
@@ -33,7 +33,7 @@ const BankingCarousel = () => {
       stat: "99.9%",
       statLabel: "Uptime SLA",
       bgGradient: "from-blue-700 to-slate-700",
-      image: "https://images.unsplash.com/photo-1616077168712-fc6c788db4af?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Server monitoring
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1280&auto=format&fit=crop&ixlib=rb-4.1.0" // Black professional in tech environment
     },
     {
       title: "AI Fraud Detection",
@@ -42,7 +42,7 @@ const BankingCarousel = () => {
       stat: "24/7",
       statLabel: "AI Protection",
       bgGradient: "from-blue-600 to-blue-800",
-      image: "https://images.unsplash.com/photo-1568952433726-3896e3881c65?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // AI/tech
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1280&auto=format&fit=crop&ixlib=rb-4.1.0" // Black professional with technology
     }
   ];
 
@@ -316,7 +316,7 @@ const HeroSection = () => {
 
             {/* Main Headline */}
             <motion.div variants={itemVariants} className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="text-gray-900 dark:text-white">Technology Platform for </span>
                 <motion.span 
                   className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent block"
@@ -330,7 +330,7 @@ const HeroSection = () => {
               </h1>
               
               <motion.p 
-                className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl"
+                className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl"
                 variants={itemVariants}
               >
                 Building scalable APIs, mobile applications, and AI-powered systems that enable secure peer-to-peer transactions. Enterprise-grade infrastructure trusted by thousands across Uganda, Kenya, and Nigeria.

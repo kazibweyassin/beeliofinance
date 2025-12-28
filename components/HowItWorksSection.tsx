@@ -57,10 +57,10 @@ const HowItWorksSection = () => {
     <section id="how-it-works" className="section-padding bg-white">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             How Beelio Works
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             Getting started with peer-to-peer lending is simple. 
             Follow these three easy steps to begin your journey.
           </p>
@@ -76,12 +76,11 @@ const HowItWorksSection = () => {
                     {step.step}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{step.title}</h3>
-                    <h4 className="text-xl font-semibold text-gray-700">{step.title}</h4>
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900">{step.title}</h3>
                   </div>
                 </div>
 
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                   {step.description}
                 </p>
 
@@ -89,7 +88,7 @@ const HowItWorksSection = () => {
                   {step.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                      <span className="text-gray-600">{detail}</span>
+                      <span className="text-base md:text-lg text-gray-600">{detail}</span>
                     </li>
                   ))}
                 </ul>
@@ -144,10 +143,10 @@ const HowItWorksSection = () => {
         {/* Process Flow Visualization */}
         <div className="mt-20">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               The Complete Process Flow
             </h3>
-            <p className="text-gray-600">
+            <p className="text-base md:text-lg text-gray-600">
               From registration to earning returns, see how Beelio connects communities
             </p>
           </div>
@@ -159,24 +158,24 @@ const HowItWorksSection = () => {
                 <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto">
                   1
                 </div>
-                <h4 className="font-semibold text-gray-900">Registration</h4>
-                <p className="text-sm text-gray-600">Complete profile and verification</p>
+                <h4 className="text-lg md:text-xl font-semibold text-gray-900">Registration</h4>
+                <p className="text-sm md:text-base text-gray-600">Complete profile and verification</p>
               </div>
 
               <div className="text-center space-y-4">
                 <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto">
                   2
                 </div>
-                <h4 className="font-semibold text-gray-900">Matching</h4>
-                <p className="text-sm text-gray-600">AI-powered borrower-lender matching</p>
+                <h4 className="text-lg md:text-xl font-semibold text-gray-900">Matching</h4>
+                <p className="text-sm md:text-base text-gray-600">AI-powered borrower-lender matching</p>
               </div>
 
               <div className="text-center space-y-4">
                 <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto">
                   3
                 </div>
-                <h4 className="font-semibold text-gray-900">Transact</h4>
-                <p className="text-sm text-gray-600">Secure lending and earning returns</p>
+                <h4 className="text-lg md:text-xl font-semibold text-gray-900">Transact</h4>
+                <p className="text-sm md:text-base text-gray-600">Secure lending and earning returns</p>
               </div>
             </div>
 
